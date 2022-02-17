@@ -1,0 +1,42 @@
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 12px 1px grey;
+    font-size: 20px;
+    color: white;
+    background-color: cadetblue;
+
+}
+
+.image {
+    height: 140px;
+    width: 200px;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+.item-info {
+    margin: -15px;
+}
+
+.price {
+    margin: -15px;
+}
+
+.item-desc {
+    font-size: 18px;
+    padding: 10px;
+}
