@@ -24,7 +24,7 @@ const menu = [
         id: 4,
         img: './img/eggs.jpg',
         title: "Farm Fresh Eggs",
-        desc: "Farm fresh eggs, available to take home by the dozen!.",
+        desc: "Farm fresh eggs, available to take home by the dozen!",
         price: 7.99,
     },
     {
@@ -38,7 +38,7 @@ const menu = [
         id: 6,
         img: './img/steak.jpg',
         title: "Steak & Frites",
-        desc: "Our dry-aged NY Strip, cooked to perfection and served up with rosemary seasoned frites",
+        desc: "Our dry-aged NY Strip, cooked to perfection and served up with rosemary seasoned frites.",
         price: 38.99, 
     },
 ];
