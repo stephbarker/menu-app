@@ -54,12 +54,12 @@ function App() {
     <Router>
     <main>
       <section>
-        <div className="title">
-        <h2>My Menu</h2>
-        <nav>
-          <li><Link to={'/add'}>Add Item</Link></li>
+        <header>
+        <nav className="nav-bar">
+          <li><Link className="home-link" to={'/'}>My Menu</Link></li>
+          <li><Link className="add-link" to={'/add'}>Add Item</Link></li>
         </nav>
-        </div>
+        </header>
         <Routes>
           <Route path='/' element={<Menu items={menuItems} handleDelete={handleDelete}/>}/>
           <Route path='/add' element={<AddItemForm addItem={addItem} />}/>
