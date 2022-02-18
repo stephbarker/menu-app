@@ -1,26 +1,23 @@
+ main {
+  background-color: palegoldenrod;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   font-size: 55px;
   text-decoration: none;
-  margin: 55px;
+  padding: 40px;
+  margin-bottom: 20px;
+  background-color: cadetblue;
 }
 
-.home-link {
+.home-link, .add-link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-.home-link:hover {
-  color: cadetblue;
-}
-
-.add-link {
-  text-decoration: none;
-  color: black;
-}
-
-.add-link:hover {
- color: green;
+.home-link:hover, .add-link:hover {
+ color: black;
 }

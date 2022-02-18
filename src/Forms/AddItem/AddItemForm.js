@@ -23,7 +23,8 @@ export default function AddItemForm(props) {
     };
 
     return (
-       <form className="form-ctr">
+        <div className='form-ctr'>
+       <form className="form">
            <label className="form-label">* Image Url:</label>
            <input className="form-input" type="url" name="img" value={item.img} onChange={handleChange}/>
            <label className="form-label">* Title:</label>
@@ -35,5 +36,6 @@ export default function AddItemForm(props) {
            <button className="submit-button" type="submit" onClick={handleSubmit}><Link className="submit-btn-txt" to={'/'}>Add Item</Link></button>
            <p className='required-txt'>* Please note, all fields all required.</p>
        </form>
+       </div>
     );
 };
