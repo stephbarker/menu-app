@@ -9,7 +9,7 @@
 .menu-item {
     text-align: center;
     width: 300px;
-    height: 300px;
+    height: 350px;
     border: 3px solid white;
     border-radius: 12px;
     margin: 20px;
@@ -39,4 +39,17 @@
 .item-desc {
     font-size: 18px;
     padding: 10px;
+}
+
+.remove-button {
+    background-color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    color: red;
+    font-size: 15px;
+}
+
+.remove-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
