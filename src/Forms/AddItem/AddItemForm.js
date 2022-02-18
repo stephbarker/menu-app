@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './AddItemForm.css';
 
 export default function AddItemForm(props) {
     //Initialize and Set State for Form
@@ -22,16 +23,17 @@ export default function AddItemForm(props) {
     };
 
     return (
-       <form>
-           <label>Image Url:</label>
-           <input type="url" name="img" value={item.img} onChange={handleChange}/>
-           <label>Title:</label>
-           <input type="text" name="title" value={item.title} onChange={handleChange}/>
-           <label>Description:</label>
-           <input type="text" name="desc" value={item.desc} onChange={handleChange}/>
-           <label>Price:</label>
-           <input type="text" name="price" value={item.price} onChange={handleChange}/>
-           <button className="submit-button" type="submit" onClick={handleSubmit}><Link to={'/'}>Add Item</Link></button>
+       <form className="form-ctr">
+           <label className="form-label">* Image Url:</label>
+           <input className="form-input" type="url" name="img" value={item.img} onChange={handleChange}/>
+           <label className="form-label">* Title:</label>
+           <input className="form-input" type="text" name="title" value={item.title} onChange={handleChange}/>
+           <label className="form-label">* Description:</label>
+           <input className="form-input" type="text" name="desc" value={item.desc} onChange={handleChange}/>
+           <label className="form-label">* Price:</label>
+           <input className="form-input" type="text" name="price" value={item.price} onChange={handleChange}/>
+           <button className="submit-button" type="submit" onClick={handleSubmit}><Link className="submit-btn-txt" to={'/'}>Add Item</Link></button>
+           <p className='required-txt'>* Please note, all fields all required.</p>
        </form>
     );
 };
