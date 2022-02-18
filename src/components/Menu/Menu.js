@@ -1,7 +1,7 @@
 import React from "react";
 import "./Menu.css";
 
-export default function Menu({ items }) {
+export default function Menu({ items, handleDelete }) {
     return (
         <div className="menu-container">
             {items.map((item) => {
@@ -15,6 +15,7 @@ export default function Menu({ items }) {
                                 <h4 className="price">${price}</h4>
                             </header>
                             <p className="item-desc">{desc}</p>
+                            <button className="remove-button" onClick={() => handleDelete(id)}>Remove Item</button>
                         </div>
                     </article>
                 );
