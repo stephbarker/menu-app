@@ -18,15 +18,15 @@ export default function AddItemForm(props) {
         //Prevent default page refresh
         e.preventDefault();
         //Check that all inputs are filled out
-        if(!item.img && !item.title && !item.desc && !item.price){
+        if(item.img && item.title && item.desc && item.price) {
+            handleChange(e, props.addItem(item));
+        }else {
             Swal.fire({
                 icon:'error',
                 title: 'Oops...',
                 text: 'Please make sure all fields are filled out.'
             });
-        }if(item.img && item.title && item.desc && item.price) {
-            handleChange(e, props.addItem(item));
-        };
+        }
     };
 
     return (

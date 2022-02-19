@@ -16,12 +16,14 @@
 .form-label {
     color: white;
     font-size: 25px;
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
 }
 
 .form-input {
     height: 35px;
     border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .submit-button {

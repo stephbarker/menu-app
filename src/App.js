@@ -4,26 +4,20 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Menu from './components/Menu/Menu';
 import AddItemForm from './forms/AddItem/AddItemForm';
-import Modal from './components/Modal/Modal';
 import items from './data';
 
 import Swal from "sweetalert2";
-import {v4 as uuidv4} from 'uuid';
 
 function App() {
   //Set State
   const [menuItems,setMenuItems] = useState(items);
-  // const [modal, setModal] = useState({
-  //   show: false,
-  //   id: null,
-  // });
-
+  
   //Helper Functions
+
   //Add Item
   const addItem = item => {
-    const id = uuidv4();
-    const newItem = {id, ...item}
-    setMenuItems([...items, newItem]);
+    item.id = items.length + 1;
+    setMenuItems([...items, item])
     Swal.fire({
       icon: 'success',
       title: 'Yay...',
@@ -33,7 +27,6 @@ function App() {
 
 //Delete Item
 const deleteItem = (id) => {
-  const deleteItem = items.filter((item) => item.id !== id);
   Swal.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
@@ -44,7 +37,7 @@ const deleteItem = (id) => {
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      setMenuItems(deleteItem);
+      setMenuItems(items.filter(item => item.id !== id));
       Swal.fire(
         'Deleted!',
         'Your file has been deleted.',
@@ -53,34 +46,6 @@ const deleteItem = (id) => {
     }
   });
 }
-
-  // //Show Confirmation Modal
-  // const handleDelete = (id) => {
-  //   setModal({
-  //     show: true,
-  //     id,
-  //   });
-  // };
-
-  // //Delete Item and Close Modal
-  // const handleDeleteTrue = () => {
-  //   if(modal.show && modal.id){
-  //     let filteredData = items.filter((item) => item.id !== modal.id);
-  //     setMenuItems(filteredData);
-  //     setModal({
-  //       show:false,
-  //       id: null,
-  //     });
-  //   }
-  // };
-
-  // //Hide Confirmation Moal
-  // const handleDeleteFalse = () => {
-  //   setModal({
-  //     show: false,
-  //     id: null,
-  //   });
-  // };
 
   return (
     <Router>
@@ -96,9 +61,6 @@ const deleteItem = (id) => {
           <Route path='/' element={<Menu items={menuItems} onDelete={deleteItem}/>}/>
           <Route path='/add' element={<AddItemForm addItem={addItem} />}/>
         </Routes>
-        {/* {modal.show && (
-          <Modal handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse}/>
-        )} */}
       </section>
     </main>
     </Router>
