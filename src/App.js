@@ -4,20 +4,20 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Menu from './components/Menu/Menu';
 import AddItemForm from './forms/AddItem/AddItemForm';
-import items from './data';
+import menuList from './data';
 
 import Swal from "sweetalert2";
 
 function App() {
   //Set State
-  const [menuItems,setMenuItems] = useState(items);
+  const [items,setItems] = useState(menuList);
   
   //Helper Functions
 
   //Add Item
   const addItem = item => {
     item.id = items.length + 1;
-    setMenuItems([...items, item])
+    setItems([...items, item])
     Swal.fire({
       icon: 'success',
       title: 'Yay...',
@@ -37,7 +37,7 @@ const deleteItem = (id) => {
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      setMenuItems(items.filter(item => item.id !== id));
+      setItems(items.filter(item => item.id !== id));
       Swal.fire(
         'Deleted!',
         'Your file has been deleted.',
@@ -58,7 +58,7 @@ const deleteItem = (id) => {
         </nav>
         </header>
         <Routes>
-          <Route path='/' element={<Menu items={menuItems} onDelete={deleteItem}/>}/>
+          <Route path='/' element={<Menu items={items} onDelete={deleteItem}/>}/>
           <Route path='/add' element={<AddItemForm addItem={addItem} />}/>
         </Routes>
       </section>
