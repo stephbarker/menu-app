@@ -12,7 +12,7 @@ From the main list, a user can edit the title, price and description by clicking
 
 ### `npm install`
 
-Make sure to instiall my depencies. In this case, I used react-router-dom, react-easy-edit and sweetalert2.
+Make sure to install depencies. In this case, I used react-router-dom, react-easy-edit and sweetalert2.
 
 ### `npm start`
 
