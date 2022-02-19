@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
 import './AddItemForm.css';
 
@@ -17,7 +18,13 @@ export default function AddItemForm(props) {
         //Prevent default page refresh
         e.preventDefault();
         //Check that all inputs are filled out
-        if(item.img && item.title && item.desc && item.price) {
+        if(!item.img && !item.title && !item.desc && !item.price){
+            Swal.fire({
+                icon:'error',
+                title: 'Oops...',
+                text: 'Please make sure all fields are filled out.'
+            });
+        }if(item.img && item.title && item.desc && item.price) {
             handleChange(e, props.addItem(item));
         };
     };
