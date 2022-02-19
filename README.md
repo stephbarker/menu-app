@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 My Menu App is a responsive, react application that allows a user to see a list of menu items, each displayed on a card providing a picture, title, price and description.
 
-Using react router, the user can navigate to an "Add Item" page, which allows them to add a menu items.
+Using react router, the user can navigate to an "Add Item" page, which allows them to add menu items.
 
 From the main list, a user can edit the title, price and description by clicking on each. They can also delete an item. Complete with a warning pop up, just to be sure!
 
