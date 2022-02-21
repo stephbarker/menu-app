@@ -21,3 +21,9 @@
 .home-link:hover, .add-link:hover {
  color: black;
 }
+
+@media only screen and (max-width: 767px) {
+  .nav-bar {
+    font-size: 30px;
+  }
+}
