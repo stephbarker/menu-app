@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import './App.css';
 import Menu from './components/Menu/Menu';
-import AddItemForm from './forms/AddItem/AddItemForm';
+import AddItemForm from './Forms/AddItem/AddItemForm';
 import menuList from './data';
 
 import Swal from "sweetalert2";
