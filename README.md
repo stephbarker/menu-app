@@ -23,6 +23,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 Currently, you cannot edit the image of a menu item, but you can edit all other info by clicking on the text. I am aware of a console error that says "placeholder" is an invalid prop for my EasyEdit component, however it is achieving the disired result on the screen - without it, it does not. So, for now I have left it in.
 
+## See the Deployed Site:
+
+[Click Here](https://dazzling-nightingale-4b38e3.netlify.app/) to see the deployed app!
+
 ## Future Goals
 
 - Adding inline editable functionality menu item images.
